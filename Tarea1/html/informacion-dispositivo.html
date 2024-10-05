@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/informacion-dispositivo.css">
+    <title>Información del Dispositivo</title>
+</head>
+<body>
+    <h1>Información del Dispositivo</h1>
+
+    <!-- Información de Contacto -->
+    <section>
+        <h2>Información del Donador</h2>
+        <p><strong>Nombre:</strong> Juan Pérez</p>
+        <p><strong>Email:</strong> juan.perez@example.com</p>
+        <p><strong>Teléfono:</strong> 12345678</p>
+        <p><strong>Región:</strong> Metropolitana</p>
+        <p><strong>Comuna:</strong> Santiago</p>
+    </section>
+
+    <!-- Información del Dispositivo Samsung Galaxy S10 -->
+    <section>
+        <h2>Detalles del Dispositivo: Samsung Galaxy S10</h2>
+        <p><strong>Estado:</strong> Funciona perfecto</p>
+        <p><strong>Tipo:</strong> Celular</p>
+        <p><strong>Foto:</strong></p>
+        <img src="../secret/samsung.jpg" alt="Foto del dispositivo Samsung Galaxy S10" id="device-image-samsung" style="width: 640px; height: 480px;" onclick="showLargeImage('../secret/samsung.jpg')">
+    </section>
+
+    <!-- Información de Contacto -->
+    <section>
+        <h2>Información del Donador</h2>
+        <p><strong>Nombre:</strong> Eliana Pérez</p>
+        <p><strong>Email:</strong> eliana.perez@example.com</p>
+        <p><strong>Teléfono:</strong> 23456712</p>
+        <p><strong>Región:</strong> Metropolitana</p>
+        <p><strong>Comuna:</strong> La Cisterna</p>
+    </section>
+
+    <!-- Información del Dispositivo Apple Watch -->
+    <section>
+        <h2>Detalles del Dispositivo: Apple Watch</h2>
+        <p><strong>Estado:</strong> Buen estado, algunas marcas de uso</p>
+        <p><strong>Tipo:</strong> Smartwatch</p>
+        <p><strong>Foto:</strong></p>
+        <img src="../secret/applewatch.jpg" alt="Foto del dispositivo Apple Watch" id="device-image-applewatch" style="width: 640px; height: 480px;" onclick="showLargeImage('../secret/applewatch.jpg')">
+    </section>
+
+    <!-- Información de Contacto -->
+    <section>
+        <h2>Información del Donador</h2>
+        <p><strong>Nombre:</strong> Tomás Ubilla</p>
+        <p><strong>Email:</strong> tomas.ubilla@example.com</p>
+        <p><strong>Teléfono:</strong> 11111111</p>
+        <p><strong>Región:</strong> San Miguel</p>
+        <p><strong>Comuna:</strong> Santiago</p>
+    </section>
+
+    <!-- Información del Dispositivo Canon Camera -->
+    <section>
+        <h2>Detalles del Dispositivo: Canon Camera</h2>
+        <p><strong>Estado:</strong> Como nueva</p>
+        <p><strong>Tipo:</strong> Cámara digital</p>
+        <p><strong>Foto:</strong></p>
+        <img src="../secret/canon.jpg" alt="Foto del dispositivo Canon Camera" id="device-image-canon" style="width: 640px; height: 480px;" onclick="showLargeImage('../secret/canon.jpg')">
+    </section>
+
+    <!-- Información de Contacto -->
+    <section>
+        <h2>Información del Donador</h2>
+        <p><strong>Nombre:</strong> Pedro Urrutia</p>
+        <p><strong>Email:</strong> pedro.urrutia@example.com</p>
+        <p><strong>Teléfono:</strong> 78945612</p>
+        <p><strong>Región:</strong> Providencia</p>
+        <p><strong>Comuna:</strong> Santiago</p>
+    </section>
+
+    <!-- Información del Dispositivo Laptop Dell -->
+    <section>
+        <h2>Detalles del Dispositivo: Laptop Dell</h2>
+        <p><strong>Estado:</strong> Batería necesita ser reemplazada</p>
+        <p><strong>Tipo:</strong> Laptop</p>
+        <p><strong>Foto:</strong></p>
+        <img src="../secret/laptopd.jpg" alt="Foto del dispositivo Laptop Dell" id="device-image-laptop" style="width: 640px; height: 480px;" onclick="showLargeImage('../secret/laptopd.jpg')">
+    </section>
+
+    <!-- Información de Contacto -->
+    <section>
+        <h2>Información del Donador</h2>
+        <p><strong>Nombre:</strong> Domingo Cid</p>
+        <p><strong>Email:</strong> domingo.cid@example.com</p>
+        <p><strong>Teléfono:</strong> 12345678</p>
+        <p><strong>Región:</strong> San Joaquin</p>
+        <p><strong>Comuna:</strong> Santiago</p>
+    </section>
+
+    <!-- Información del Dispositivo iPad -->
+    <section>
+        <h2>Detalles del Dispositivo: iPad</h2>
+        <p><strong>Estado:</strong> Funciona perfectamente, sin rayones</p>
+        <p><strong>Tipo:</strong> Tablet</p>
+        <p><strong>Foto:</strong></p>
+        <img src="../secret/ipad.jpg" alt="Foto del dispositivo iPad" id="device-image-ipad" style="width: 640px; height: 480px;" onclick="showLargeImage('../secret/ipad.jpg')">
+    </section>
+
+    <!-- Modal para mostrar la imagen ampliada -->
+    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+        <img id="modal-img" src="../secret/foto2.jpg" style="max-width:100%; max-height:100%;" alt="modal_img" onclick="closeModal()">
+    </div>
+
+    <!-- Formulario para Agregar Comentario -->
+    <section>
+        <h2>Agregar Comentario</h2>
+        <form id="comment-form" method="post">
+            <label for="comment-name">Nombre:</label>
+            <input type="text" id="comment-name" name="name" minlength="3" maxlength="80" required><br><br>
+
+            <label for="comment-date">Fecha:</label>
+            <input type="date" id="comment-date" name="date" required readonly><br><br>
+
+            <label for="comment-text">Comentario:</label>
+            <textarea id="comment-text" name="comment" rows="4" cols="50" minlength="5" required></textarea><br><br>
+
+            <button id="submit-btn" type="button" onclick="validateForm()">Agregar comentario</button>
+        </form>
+
+        <!-- Mensaje de error o confirmación -->
+        <div id="message-container" style="display:none;">
+            <p id="message-text"></p>
+            <button id="back-btn" style="display:none;" onclick="resetForm()">Volver al Formulario</button>
+        </div>
+    </section>
+
+    <!-- Botón para Volver a la Portada -->
+    <button onclick="window.location.href='index.html';">
+        Menu
+    </button>
+
+    <script src="../js/info-disp.js"></script>
+</body>
+</html>

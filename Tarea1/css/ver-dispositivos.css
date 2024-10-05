@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+.foto {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    object-fit: cover;
+}
+.foto-large {
+    width: 640px;
+    height: 480px;
+    cursor: pointer;
+    object-fit: cover;
+}
+.foto-giant {
+    width: 1280px;
+    height: 1024px;
+    cursor: pointer;
+    object-fit: cover;
+}
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

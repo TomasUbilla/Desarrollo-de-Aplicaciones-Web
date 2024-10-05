@@ -1,0 +1,30 @@
+:root {
+    --color-borde: #1100ff;
+  }
+  
+  .container {
+    border: 1px solid var(--color-borde);
+    height: 50%;
+    max-width: 350px;
+    margin: 2% auto;
+    padding: 2rem;
+    padding-top: .5rem;
+    background-color: #ffffff;
+  }
+  
+  #bajada {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #hidden-image {
+    display: none;
+  }

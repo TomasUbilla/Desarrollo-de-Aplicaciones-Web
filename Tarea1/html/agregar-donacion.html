@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>EcoDonación Tech</title>
+    <link rel="stylesheet" type="text/css" href="../css/agregar-donacion.css">
+</head>
+<body>
+    <div class="main-container">
+
+        <!-- Formulario de contacto, no se clona -->
+        <form name="myForm" method="post" enctype="multipart/form-data" class="device-form">
+            <h1>Datos de contacto</h1>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" minlength="15" required><br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" minlength="15" required><br>
+
+            <label for="phone">Teléfono</label>
+            <input type="text" name="phone" id="phone" minlength="8" required><br>
+            
+            <label for="select-region">Región</label>
+            <select name="select-region" id="select-region" required>
+                <option value="">Seleccione una región</option>
+            </select><br>
+
+            <label for="select-comuna">Comuna</label>
+            <select name="select-comuna" id="select-comuna" required>
+                <option value="">Seleccione una comuna</option>
+            </select><br>
+        </form>
+
+        <!-- Contenedor para formularios de dispositivos clonados -->
+        <div id="form-container">
+            <!-- Formulario original de objeto -->
+            <form name="myFormObject" method="post" enctype="multipart/form-data" class="device-form">
+                <h1>Información del Dispositivo</h1>
+                <h3>Dispositivo 1</h3>
+
+                <label for="nameD">Nombre del dispositivo</label>
+                <input type="text" name="nameD" id="nameD" minlength="15" required><br>
+
+                <label for="comments">Descripción</label>
+                <textarea class="static" id="comments" name="comments" rows="4" cols="50" placeholder="Escribe tus comentarios aquí..."></textarea>
+
+                <label for="select-type">Tipo</label>
+                <select name="select-type" id="select-type" required>
+                    <option value="">Seleccione el tipo de dispositivo</option>
+                </select><br>
+                
+                <label for="year">Años de uso</label>
+                <input type="text" name="year" id="year" minlength="1" required><br>
+
+                <label for="select-state">Estado de funcionamiento</label>
+                <select name="select-state" id="select-state" required>
+                    <option value="">Seleccione el estado del dispositivo</option>
+                </select><br>
+
+                <label for="files">Fotos de Productos</label>
+                <input type="file" name="files" id="files" multiple accept="image/*,.pdf" required><br>
+            </form>
+        </div>
+
+        <!-- Contenedor de mensajes de validación -->
+        <div id="val-box" hidden>
+            <h2 id="val-msg">Oculto</h2>
+            <ul id="val-list"></ul>
+        </div>          
+
+        <!-- Botones de acción -->
+        <button id="add-btn" type="button">Agregar otro dispositivo a esta donación</button>
+        <button id="submit-btn" type="button">Publicar esta donación</button>
+        <button id="menu-btn" type="button" onclick="window.location.href='../html/index.html'">Volver al menú</button>
+        
+      
+    </div>
+
+    <script src="../js/select.js"></script>
+    <script src="../js/validation.js"></script>
+</body>
+</html>
